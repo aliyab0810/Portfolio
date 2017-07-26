@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<body h2 style=  "background-color:#4a4a4a;color:white;padding">
-</body>
-
+<style>
+body {
+	background-image: url("data:image/jpeg;base64,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");
+}
+</style>
 <button onCLick="Name()"> Click here to reveal my name!</button>
 <script>
 function Name() {
@@ -17,7 +19,7 @@ function Name() {
 
 <div class="cities">
 <h2> <p style="font-size:36px;">About Me!</h2>
-<h2> <p style="font-family:courier;">I am currently learning  Computer Science in the Girls Who Code Program! I also like to play the piano. And i like chicken.</h2>
+<h2> <p style="font-family:courier;">I am currently learning  Computer Science in the Girls Who Code Program! I also like to play the piano. And I like chicken.</h2>
 <img src= "https://i.ytimg.com/vi/ovM0_74zoLw/maxresdefault.jpg" alt=piano style="width:304px;height:228px">
  
  <h2> <p style= "font-family : courier;"> In Girls Who Code, I use a program called Scratch. </h2>
